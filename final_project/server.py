@@ -16,7 +16,7 @@ def englishToFrench():
 def frenchToEnglish():
     textToTranslate = request.args.get('textToTranslate')
     # Write your code here
-    translatedText = machinetranslation.translator.french_to_englsih(textToTranslate)
+    translatedText = machinetranslation.translator.french_to_english(textToTranslate)
     return translatedText
 
 @app.route("/")

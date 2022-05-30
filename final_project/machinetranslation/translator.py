@@ -19,18 +19,24 @@ language_translator.set_service_url(url)
 
 def english_to_french(english_text):
     #write the code here
-    translation = language_translator.translate(
-        text=english_text,
-        model_id='en-fr').get_result()
-    trans_att = translation.get('translations')
-    french_text = trans_att[0].get('translation')
+    if english_text!= None:
+        translation = language_translator.translate(
+            text=english_text,
+            model_id='en-fr').get_result()
+        trans_att = translation.get('translations')
+        french_text = trans_att[0].get('translation')
+    else:
+        french_text = None
     return french_text
 
 def french_to_english(french_text):
     #write the code here
-    translation = language_translator.translate(
-        text=french_text,
-        model_id='fr-en').get_result()
-    trans_att = translation.get('translations')
-    english_text = trans_att[0].get('translation')
+    if french_text!= None:
+        translation = language_translator.translate(
+            text=french_text,
+            model_id='fr-en').get_result()
+        trans_att = translation.get('translations')
+        english_text = trans_att[0].get('translation')
+    else: 
+        english_text = None
     return english_text

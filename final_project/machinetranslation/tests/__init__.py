@@ -1,1 +1,1 @@
-from . import tests.py
+from . import tests
